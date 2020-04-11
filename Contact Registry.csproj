@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Address.cs" />
+    <Compile Include="Contact.cs" />
+    <Compile Include="ContactManager.cs" />
     <Compile Include="Countries.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
