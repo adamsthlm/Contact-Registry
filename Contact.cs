@@ -5,3 +5,10 @@ e-mail: ak7764@mau.se
 */
 
 
+namespace Contact_Registry
+{
+    class Contact
+    {
+
+    } // class 
+}// namespace 

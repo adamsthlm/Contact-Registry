@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.grpBoxName = new System.Windows.Forms.GroupBox();
-            this.grpBoxAdress = new System.Windows.Forms.GroupBox();
-            this.listBoxContacts = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtBoxFirstName = new System.Windows.Forms.TextBox();
             this.txtBoxLastName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtBoxStreet = new System.Windows.Forms.TextBox();
-            this.txtBoxCity = new System.Windows.Forms.TextBox();
-            this.txtBoxZip = new System.Windows.Forms.TextBox();
+            this.txtBoxFirstName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.grpBoxAdress = new System.Windows.Forms.GroupBox();
             this.txtBoxCountry = new System.Windows.Forms.TextBox();
+            this.txtBoxZip = new System.Windows.Forms.TextBox();
+            this.txtBoxCity = new System.Windows.Forms.TextBox();
+            this.txtBoxStreet = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.listBoxContacts = new System.Windows.Forms.ListBox();
             this.butt_add = new System.Windows.Forms.Button();
             this.butt_change = new System.Windows.Forms.Button();
             this.butt_delete = new System.Windows.Forms.Button();
@@ -65,6 +65,38 @@
             this.grpBoxName.TabStop = false;
             this.grpBoxName.Text = "Name";
             // 
+            // txtBoxLastName
+            // 
+            this.txtBoxLastName.Location = new System.Drawing.Point(115, 45);
+            this.txtBoxLastName.Name = "txtBoxLastName";
+            this.txtBoxLastName.Size = new System.Drawing.Size(346, 20);
+            this.txtBoxLastName.TabIndex = 3;
+            // 
+            // txtBoxFirstName
+            // 
+            this.txtBoxFirstName.Location = new System.Drawing.Point(115, 14);
+            this.txtBoxFirstName.Name = "txtBoxFirstName";
+            this.txtBoxFirstName.Size = new System.Drawing.Size(346, 20);
+            this.txtBoxFirstName.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Last name";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "First name";
+            // 
             // grpBoxAdress
             // 
             this.grpBoxAdress.Controls.Add(this.txtBoxCountry);
@@ -82,72 +114,33 @@
             this.grpBoxAdress.TabStop = false;
             this.grpBoxAdress.Text = "Address";
             // 
-            // listBoxContacts
+            // txtBoxCountry
             // 
-            this.listBoxContacts.FormattingEnabled = true;
-            this.listBoxContacts.Location = new System.Drawing.Point(24, 303);
-            this.listBoxContacts.Name = "listBoxContacts";
-            this.listBoxContacts.Size = new System.Drawing.Size(491, 277);
-            this.listBoxContacts.TabIndex = 2;
+            this.txtBoxCountry.Location = new System.Drawing.Point(115, 124);
+            this.txtBoxCountry.Name = "txtBoxCountry";
+            this.txtBoxCountry.Size = new System.Drawing.Size(346, 20);
+            this.txtBoxCountry.TabIndex = 7;
             // 
-            // label1
+            // txtBoxZip
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "First name";
+            this.txtBoxZip.Location = new System.Drawing.Point(115, 88);
+            this.txtBoxZip.Name = "txtBoxZip";
+            this.txtBoxZip.Size = new System.Drawing.Size(346, 20);
+            this.txtBoxZip.TabIndex = 6;
             // 
-            // label2
+            // txtBoxCity
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Last name";
+            this.txtBoxCity.Location = new System.Drawing.Point(115, 56);
+            this.txtBoxCity.Name = "txtBoxCity";
+            this.txtBoxCity.Size = new System.Drawing.Size(346, 20);
+            this.txtBoxCity.TabIndex = 5;
             // 
-            // txtBoxFirstName
+            // txtBoxStreet
             // 
-            this.txtBoxFirstName.Location = new System.Drawing.Point(115, 14);
-            this.txtBoxFirstName.Name = "txtBoxFirstName";
-            this.txtBoxFirstName.Size = new System.Drawing.Size(346, 20);
-            this.txtBoxFirstName.TabIndex = 2;
-            // 
-            // txtBoxLastName
-            // 
-            this.txtBoxLastName.Location = new System.Drawing.Point(115, 45);
-            this.txtBoxLastName.Name = "txtBoxLastName";
-            this.txtBoxLastName.Size = new System.Drawing.Size(346, 20);
-            this.txtBoxLastName.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Street";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 63);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "City";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 95);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Zip code";
+            this.txtBoxStreet.Location = new System.Drawing.Point(115, 23);
+            this.txtBoxStreet.Name = "txtBoxStreet";
+            this.txtBoxStreet.Size = new System.Drawing.Size(346, 20);
+            this.txtBoxStreet.TabIndex = 4;
             // 
             // label6
             // 
@@ -158,33 +151,40 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "Country";
             // 
-            // txtBoxStreet
+            // label5
             // 
-            this.txtBoxStreet.Location = new System.Drawing.Point(115, 23);
-            this.txtBoxStreet.Name = "txtBoxStreet";
-            this.txtBoxStreet.Size = new System.Drawing.Size(346, 20);
-            this.txtBoxStreet.TabIndex = 4;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 95);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Zip code";
             // 
-            // txtBoxCity
+            // label4
             // 
-            this.txtBoxCity.Location = new System.Drawing.Point(115, 56);
-            this.txtBoxCity.Name = "txtBoxCity";
-            this.txtBoxCity.Size = new System.Drawing.Size(346, 20);
-            this.txtBoxCity.TabIndex = 5;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 63);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(24, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "City";
             // 
-            // txtBoxZip
+            // label3
             // 
-            this.txtBoxZip.Location = new System.Drawing.Point(115, 88);
-            this.txtBoxZip.Name = "txtBoxZip";
-            this.txtBoxZip.Size = new System.Drawing.Size(346, 20);
-            this.txtBoxZip.TabIndex = 6;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Street";
             // 
-            // txtBoxCountry
+            // listBoxContacts
             // 
-            this.txtBoxCountry.Location = new System.Drawing.Point(115, 124);
-            this.txtBoxCountry.Name = "txtBoxCountry";
-            this.txtBoxCountry.Size = new System.Drawing.Size(346, 20);
-            this.txtBoxCountry.TabIndex = 7;
+            this.listBoxContacts.FormattingEnabled = true;
+            this.listBoxContacts.Location = new System.Drawing.Point(24, 303);
+            this.listBoxContacts.Name = "listBoxContacts";
+            this.listBoxContacts.Size = new System.Drawing.Size(491, 277);
+            this.listBoxContacts.TabIndex = 2;
             // 
             // butt_add
             // 
@@ -194,6 +194,7 @@
             this.butt_add.TabIndex = 3;
             this.butt_add.Text = "ADD";
             this.butt_add.UseVisualStyleBackColor = true;
+            this.butt_add.Click += new System.EventHandler(this.butt_add_Click);
             // 
             // butt_change
             // 

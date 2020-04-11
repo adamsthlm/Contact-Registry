@@ -16,5 +16,10 @@ namespace Contact_Registry
         {
             InitializeComponent();
         }
-    }
-}
+
+        private void butt_add_Click(object sender, EventArgs e)
+        {
+
+        }
+    } // class
+} // namespace 
