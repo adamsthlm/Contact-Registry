@@ -22,6 +22,7 @@ namespace Contact_Registry
         public Countries Country { get; set; }
         public string Street { get; set; }
         public string ZipCode { get; set; }
+        
         // public Address Address { get; set; } // I'm unsure about this property 
 
 

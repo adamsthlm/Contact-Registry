@@ -12,17 +12,25 @@ namespace Contact_Registry
         // Fields
         private string _firstname = string.Empty;
         private string _lastname = string.Empty;
-        // private Address _address = new Address();
+        
+        // private Address _address = new Address(); * Varför ska jag inte ha ett _address fält?
 
         // Aggregation
         private Address address;
 
         // Properties
         public string Firstname { get; set; }
-        public string Lastname { get; set; }
+
+        private string lastname;
+
+        public string GetLastname() { return lastname.ToUpper(); }
+
+        public void SetLastname(string value) => lastname = value;
+      
+
         public string Fullname
         {
-            get { return Firstname + " " + Lastname; }
+            get { return Firstname + " " + ToUpper(GetLastname()); }
         }
 
 
@@ -35,7 +43,7 @@ namespace Contact_Registry
         public Contact(string firstname, string lastname, Address adr)
         {
             _firstname = Firstname; // Field _firstname is set via property Firstname
-            _lastname = Lastname; // Field _lastname is set via property Lastname
+            _lastname = GetLastname(); // Field _lastname is set via property Lastname
             this.address = adr; // one Address object
         }
 
@@ -44,7 +52,7 @@ namespace Contact_Registry
         {
             _firstname = theOther._firstname;
             _lastname = theOther._lastname;
-            this.address = new Address(theOther.address); // för att få denna rad att fungera skapade jag fält och konstruktor i klassen Adress
+            this.address = new Address(theOther.address); // för att få denna rad att fungera skapade jag fält och konstruktor i klassen Address
 
         }
 
@@ -80,7 +88,12 @@ namespace Contact_Registry
         {
             string strOut = string.Format("{0,-20} {1}", Fullname, address.ToString());
             return strOut;
+        }  
 
+        private string ToUpper(string lastname)
+        {
+            string outString = lastname.ToUpper();
+            return outString;
         }
 
     } // class 
