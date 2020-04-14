@@ -1,5 +1,5 @@
 ﻿/*
-Denna fil har skapats som en del av kursen [C# I] på Malmö Universitet 2020
+Denna fil har skapats som en del av kursen [C# I] på Malmö University 2020
 Namn: Carl-Adam Berglund
 e-mail: ak7764@mau.se
 */
@@ -12,26 +12,28 @@ namespace Contact_Registry
         // Fields
         private string _firstname = string.Empty;
         private string _lastname = string.Empty;
+        private Countries _countries;
         
         // private Address _address = new Address(); * Varför ska jag inte ha ett _address fält?
 
         // Aggregation
         private Address address;
 
-        // Properties
-        public string Firstname { get; set; }
+        // Properties or encapsulated fields - auto generated  (Ctrl-R
+        public string Firstname { get => _firstname; set => _firstname = value; }
+        public string Lastname { get => _lastname; set => _lastname = value; }
+        public Countries Countries { get => _countries; set => _countries = value; }
 
-        private string lastname;
+        public string GetLastname() { return Lastname.ToUpper(); }
 
-        public string GetLastname() { return lastname.ToUpper(); }
 
-        public void SetLastname(string value) => lastname = value;
-      
 
         public string Fullname
         {
             get { return Firstname + " " + ToUpper(GetLastname()); }
         }
+
+     
 
 
 
@@ -42,16 +44,25 @@ namespace Contact_Registry
         // constructor w. 3 params.
         public Contact(string firstname, string lastname, Address adr)
         {
-            _firstname = Firstname; // Field _firstname is set via property Firstname
-            _lastname = GetLastname(); // Field _lastname is set via property Lastname
+            Firstname = Firstname; // Field _firstname is set via property Firstname
+            Lastname = lastname; // Field _lastname is set via property Lastname
             this.address = adr; // one Address object
+
+        }
+        // constructor w. 4 params.
+        public Contact(string firstname, string lastname, Address adr, Countries country)
+        {
+            Firstname = Firstname; // Field _firstname is set via property Firstname
+            Lastname = lastname; // Field _lastname is set via property Lastname
+            this.address = adr; // one Address object
+            Countries = Countries.EMPTY_NO_COUNTRY;
         }
 
         // theOther constructor for copying objects
         public Contact(Contact theOther)
         {
-            _firstname = theOther._firstname;
-            _lastname = theOther._lastname;
+            Firstname = theOther.Firstname;
+            Lastname = theOther.Lastname;
             this.address = new Address(theOther.address); // för att få denna rad att fungera skapade jag fält och konstruktor i klassen Address
 
         }
@@ -63,13 +74,13 @@ namespace Contact_Registry
 
             if (ok)
             {
-                if (_firstname.Equals(string.Empty))
+                if (Firstname.Equals(string.Empty))
                 {
                     ok = false;
                     return ok;
                 } else
 
-                if (_lastname.Equals(string.Empty))
+                if (Lastname.Equals(string.Empty))
                 {
                     ok = false;
                     return ok;
