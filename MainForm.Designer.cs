@@ -34,7 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.grpBoxAdress = new System.Windows.Forms.GroupBox();
-            this.txtBoxCountry = new System.Windows.Forms.TextBox();
             this.txtBoxZip = new System.Windows.Forms.TextBox();
             this.txtBoxCity = new System.Windows.Forms.TextBox();
             this.txtBoxStreet = new System.Windows.Forms.TextBox();
@@ -48,6 +47,7 @@
             this.butt_delete = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.lab_nrOfRecords = new System.Windows.Forms.Label();
+            this.cmbCountry = new System.Windows.Forms.ComboBox();
             this.grpBoxName.SuspendLayout();
             this.grpBoxAdress.SuspendLayout();
             this.SuspendLayout();
@@ -99,7 +99,7 @@
             // 
             // grpBoxAdress
             // 
-            this.grpBoxAdress.Controls.Add(this.txtBoxCountry);
+            this.grpBoxAdress.Controls.Add(this.cmbCountry);
             this.grpBoxAdress.Controls.Add(this.txtBoxZip);
             this.grpBoxAdress.Controls.Add(this.txtBoxCity);
             this.grpBoxAdress.Controls.Add(this.txtBoxStreet);
@@ -113,13 +113,6 @@
             this.grpBoxAdress.TabIndex = 1;
             this.grpBoxAdress.TabStop = false;
             this.grpBoxAdress.Text = "Address";
-            // 
-            // txtBoxCountry
-            // 
-            this.txtBoxCountry.Location = new System.Drawing.Point(115, 124);
-            this.txtBoxCountry.Name = "txtBoxCountry";
-            this.txtBoxCountry.Size = new System.Drawing.Size(346, 20);
-            this.txtBoxCountry.TabIndex = 7;
             // 
             // txtBoxZip
             // 
@@ -234,6 +227,14 @@
             this.lab_nrOfRecords.TabIndex = 7;
             this.lab_nrOfRecords.Text = "Not implemented yet";
             // 
+            // cmbCountry
+            // 
+            this.cmbCountry.FormattingEnabled = true;
+            this.cmbCountry.Location = new System.Drawing.Point(115, 122);
+            this.cmbCountry.Name = "cmbCountry";
+            this.cmbCountry.Size = new System.Drawing.Size(226, 21);
+            this.cmbCountry.TabIndex = 7;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,7 +268,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grpBoxAdress;
         private System.Windows.Forms.ListBox listBoxContacts;
-        private System.Windows.Forms.TextBox txtBoxCountry;
         private System.Windows.Forms.TextBox txtBoxZip;
         private System.Windows.Forms.TextBox txtBoxCity;
         private System.Windows.Forms.TextBox txtBoxStreet;
@@ -280,6 +280,7 @@
         private System.Windows.Forms.Button butt_delete;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lab_nrOfRecords;
+        private System.Windows.Forms.ComboBox cmbCountry;
     }
 }
 

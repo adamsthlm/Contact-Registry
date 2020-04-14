@@ -36,7 +36,9 @@ namespace Contact_Registry
         private void updateGUI()
         {
             string[] strContracts = contactManager.GetContactsInfo();
-            // Not implemented yet
+            listBoxContacts.Items.Clear();
+            listBoxContacts.Items.AddRange(strContracts);
+            lab_nrOfRecords.Text = listBoxContacts.Items.Count.ToString();
           
         }
 
@@ -47,7 +49,24 @@ namespace Contact_Registry
 
         private void listBoxContacts_SelectedIndexChanged(object sender, EventArgs e)
         {
+            UpdateContactInfoFromRegistry();
+        }
 
+        private void UpdateContactInfoFromRegistry()
+        {
+            int index = listBoxContacts.SelectedIndex;
+            if (index < 0)
+            {
+                return;
+            }
+
+            Contact contact = contactManager.GetContact(index);
+
+            cmbCountry.Items.AddRange(Enum.GetNames(typeof(Countries)));
+            cmbCountry.SelectedIndex = (int)Countries.Sverige;
+
+            contactManager.TestValues();
+            updateGUI();
         }
     } // class
 } // namespace 

@@ -57,6 +57,16 @@ namespace Contact_Registry
             else
                 return false;
         }
+        public bool AddContact(Contact contactIN)
+        {
+            if (contactIN.Equals(null))
+            {
+                return false;
+            } else
+            ContactList.Add(new Contact());
+            return true;
+        }
+       
 
         // Re-factored by Visual Studio (Ctrl + R, M)
         private static bool CheckIfNamesIsValid(string firstName, string lastName, Address addressIN)
@@ -84,7 +94,7 @@ namespace Contact_Registry
 
             foreach (Contact contactItem in ContactList)
             {
-                strInfoStrings[i++] = contactItem.ToString(); //haha, gotIT!
+                strInfoStrings[i++] = contactItem.ToString();
             }
             return strInfoStrings;
         }

@@ -30,7 +30,7 @@ namespace Contact_Registry
 
         public string Fullname
         {
-            get { return Firstname + " " + ToUpper(GetLastname()); }
+            get { return Firstname + " " + GetLastname(); }
         }
 
      
@@ -41,6 +41,14 @@ namespace Contact_Registry
         // default constructor
         public Contact() { address = new Address(); }
 
+        // constructor w. 1 params.
+        public Contact(Contact contact)
+        {
+            Firstname = contact._firstname;
+            Lastname = contact._lastname;
+
+        }
+        
         // constructor w. 3 params.
         public Contact(string firstname, string lastname, Address adr)
         {
@@ -59,13 +67,13 @@ namespace Contact_Registry
         }
 
         // theOther constructor for copying objects
-        public Contact(Contact theOther)
-        {
-            Firstname = theOther.Firstname;
-            Lastname = theOther.Lastname;
-            this.address = new Address(theOther.address); // för att få denna rad att fungera skapade jag fält och konstruktor i klassen Address
+        // public Contact(Contact theOther)
+        // {
+        //    Firstname = theOther.Firstname;
+        //    Lastname = theOther.Lastname;
+        //    this.address = new Address(theOther.address); // för att få denna rad att fungera skapade jag fält och konstruktor i klassen Address
 
-        }
+        // }
 
         public bool ValidateData()
         {
