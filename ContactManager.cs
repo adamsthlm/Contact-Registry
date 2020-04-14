@@ -72,9 +72,22 @@ namespace Contact_Registry
         public void TestValues()
         {
             AddContact("Apu", "Simpsson", new Address("Simpsson North Avenue", "123 45", "Johanneshov", Countries.Sverige));
+            AddContact("Nisse", "Lundström", new Address("Lundgatan 32", "543 21", "Kalmar"));
+
 
         }
 
+        public string[] GetContactsInfo()
+        {
+            string[] strInfoStrings = new string[ContactList.Count];
+            int i = 0;
+
+            foreach (Contact contactItem in ContactList)
+            {
+                strInfoStrings[i++] = contactItem.ToString(); //haha, gotIT!
+            }
+            return strInfoStrings;
+        }
 
     } // class
 } // namespace 

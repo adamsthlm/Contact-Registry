@@ -185,6 +185,7 @@
             this.listBoxContacts.Name = "listBoxContacts";
             this.listBoxContacts.Size = new System.Drawing.Size(491, 277);
             this.listBoxContacts.TabIndex = 2;
+            this.listBoxContacts.SelectedIndexChanged += new System.EventHandler(this.listBoxContacts_SelectedIndexChanged);
             // 
             // butt_add
             // 
